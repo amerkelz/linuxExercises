@@ -7,5 +7,5 @@ if [[ $# -ne 2 ]]; then
 fi
 
 dir=$1
-n=$2c # add c for bytes
-find $dir -size $n -type f -exec rm {} \;
+n=$2
+find $dir -size +"${n}c" -type f -exec rm {} \;
